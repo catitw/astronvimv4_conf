@@ -62,6 +62,11 @@ local keybinding = {
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim", enabled = false },
 }
 
+---@type LazySpec[]
+local scrolling = {
+    { import = "astrocommunity.scrolling.mini-animate" },
+}
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -73,4 +78,5 @@ return {
   unpack(editing_support),
   unpack(indent),
   unpack(keybinding),
+  unpack(scrolling),
 }

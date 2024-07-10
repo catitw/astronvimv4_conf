@@ -2,7 +2,7 @@
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
 
----@type LazySpec
+---@type LazySpec[]
 local pack = {
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.bash" },
@@ -20,17 +20,17 @@ local pack = {
   { import = "astrocommunity.pack.yaml" },
 }
 
----@type LazySpec
-local markdown_and_latex ={
+---@type LazySpec[]
+local markdown_and_latex = {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 }
 
----@type LazySpec
+---@type LazySpec[]
 local note_taking = {
   { import = "astrocommunity.note-taking.neorg" },
 }
 
----@type LazySpec
+---@type LazySpec[]
 local colorscheme = {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
@@ -38,7 +38,7 @@ local colorscheme = {
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
 }
 
----@type LazySpec
+---@type LazySpec[]
 local editing_support = {
   -- a better annotation generator
   { import = "astrocommunity.editing-support.neogen" },
@@ -52,14 +52,14 @@ local editing_support = {
   { import = "astrocommunity.editing-support.wildfire-nvim" },
 }
 
----@type LazySpec
+---@type LazySpec[]
 local indent = {
   { import = "astrocommunity.indent.indent-rainbowline" },
 }
 
----@type LazySpec
+---@type LazySpec[]
 local keybinding = {
-  -- { import = "astrocommunity.keybinding.nvcheatsheet-nvim" }, 
+  { import = "astrocommunity.keybinding.nvcheatsheet-nvim", enabled = false },
 }
 
 ---@type LazySpec
@@ -72,5 +72,5 @@ return {
   unpack(colorscheme),
   unpack(editing_support),
   unpack(indent),
-  unpack(keybinding)
+  unpack(keybinding),
 }

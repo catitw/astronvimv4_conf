@@ -8,6 +8,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "pyright",
+        "clangd",
         -- add more arguments for adding more language servers
       },
     },

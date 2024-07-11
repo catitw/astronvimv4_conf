@@ -96,6 +96,11 @@ local completion = {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
 
+local debugging = {
+  { import = "astrocommunity.debugging.telescope-dap-nvim" },
+  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
+}
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -112,4 +117,5 @@ return {
   unpack(color),
   unpack(motion),
   unpack(completion),
+  unpack(debugging),
 }

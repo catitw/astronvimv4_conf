@@ -41,6 +41,7 @@ local colorscheme = {
 
 ---@type LazySpec[]
 local editing_support = {
+  { import = "astrocommunity.editing-support.comment-box-nvim" },
   -- a better annotation generator
   { import = "astrocommunity.editing-support.neogen" },
   -- describe the regex under the cursor, toggled with `gR`
@@ -60,12 +61,29 @@ local indent = {
 
 ---@type LazySpec[]
 local keybinding = {
-  { import = "astrocommunity.keybinding.nvcheatsheet-nvim", enabled = false },
+  -- key `F1`: toggle cheatsheet
+  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 }
 
 ---@type LazySpec[]
 local scrolling = {
   { import = "astrocommunity.scrolling.mini-animate" },
+}
+
+---@type LazySpec[]
+local split_and_window = {
+  -- cmd `:WindowsEnableAutowidth`, `:WindowsDisableAutowidth`, `:WindowsToggleAutowidth`
+  { import = "astrocommunity.split-and-window.windows-nvim" },
+  -- key `<Leader>um`: toggle minimap
+  { import = "astrocommunity.split-and-window.minimap-vim" },
+}
+
+---@type LazySpec[]
+local color = {
+  -- key `<Leader>uT`: toggle transparent
+  { import = "astrocommunity.color.transparent-nvim" },
+  -- key `<Leader>uW`: toggle twilight
+  { import = "astrocommunity.color.twilight-nvim" },
 }
 
 ---@type LazySpec
@@ -80,4 +98,6 @@ return {
   unpack(indent),
   unpack(keybinding),
   unpack(scrolling),
+  unpack(split_and_window),
+  unpack(color),
 }

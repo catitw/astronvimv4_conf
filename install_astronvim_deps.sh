@@ -2,6 +2,8 @@
 
 # Define dependencies for Arch Linux
 arch_dependencies=(unzip ttf-0xproto-nerd go)
+aur_deps=(code-minimap)
+
 
 # Define dependencies for Ubuntu 22.04
 ubuntu_dependencies=()
@@ -10,6 +12,7 @@ ubuntu_dependencies=()
 install_arch_dependencies() {
     echo "Installing dependencies for Arch Linux..."
     sudo pacman -Syu --noconfirm "${arch_dependencies[@]}"
+    paru -S --noconfirm "${aur_deps[@]}"
 }
 
 # Install dependencies on Ubuntu 22.04

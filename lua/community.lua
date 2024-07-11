@@ -80,10 +80,20 @@ local split_and_window = {
 
 ---@type LazySpec[]
 local color = {
-  -- key `<Leader>uT`: toggle transparent
-  { import = "astrocommunity.color.transparent-nvim" },
   -- key `<Leader>uW`: toggle twilight
   { import = "astrocommunity.color.twilight-nvim" },
+  -- key `<Leader>uT`: toggle transparent
+  { import = "astrocommunity.color.transparent-nvim" },
+}
+
+---@type LazySpec[]
+local motion = {
+  { import = "astrocommunity.motion.flash-nvim", enabled = false },
+}
+
+---@type LazySpec[]
+local completion = {
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
 
 ---@type LazySpec
@@ -100,4 +110,6 @@ return {
   unpack(scrolling),
   unpack(split_and_window),
   unpack(color),
+  unpack(motion),
+  unpack(completion),
 }

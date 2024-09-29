@@ -94,7 +94,7 @@ local motion = {
 
 ---@type LazySpec[]
 local completion = {
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp", enabled = false },
 }
 
 local debugging = {

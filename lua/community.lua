@@ -20,6 +20,7 @@ local pack = {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.zig" },
 }
 
 ---@type LazySpec[]

@@ -98,9 +98,15 @@ local completion = {
   { import = "astrocommunity.completion.copilot-lua-cmp", enabled = false },
 }
 
+---@type LazySpec[]
 local debugging = {
   { import = "astrocommunity.debugging.telescope-dap-nvim" },
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
+}
+
+---@type LazySpec[]
+local recipes = {
+  { import = "astrocommunity.recipes.neovide" },
 }
 
 ---@type LazySpec
@@ -120,4 +126,5 @@ return {
   unpack(motion),
   unpack(completion),
   unpack(debugging),
+  unpack(recipes),
 }

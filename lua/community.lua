@@ -109,6 +109,11 @@ local recipes = {
   { import = "astrocommunity.recipes.neovide" },
 }
 
+---@type LazySpec[]
+local neovim_lua_development = {
+  { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
+}
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -127,4 +132,5 @@ return {
   unpack(completion),
   unpack(debugging),
   unpack(recipes),
+  unpack(neovim_lua_development),
 }

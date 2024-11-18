@@ -58,12 +58,24 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        ["<F7>"] = { '<Cmd>execute v:count . "ToggleTerm direction=float"<CR>', desc = "ToggleTerm float" },
+
+        -- maps.n["<F7>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" }
+        --  maps.t["<F7>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" }
+        --  maps.i["<F7>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" }
+        --
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      t = {
+        ["<F7>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
+      },
+      i = {
+        ["<F7>"] = { "<Esc><Cmd>ToggleTerm direction=float<CR>", desc = "ToggleTerm float" },
       },
     },
   },

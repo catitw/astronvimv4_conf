@@ -14,7 +14,7 @@ local pack = {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.pack.python-ruff", enabled = false },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.toml" },
@@ -114,6 +114,13 @@ local neovim_lua_development = {
   { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
 }
 
+---@type LazySpec[]
+local lsp = {
+  { import = "astrocommunity.lsp.actions-preview-nvim" },
+  { import = "astrocommunity.lsp.nvim-lsp-endhints" },
+  { import = "astrocommunity.lsp.lspsaga-nvim" },
+}
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -133,4 +140,5 @@ return {
   unpack(debugging),
   unpack(recipes),
   unpack(neovim_lua_development),
+  unpack(lsp),
 }

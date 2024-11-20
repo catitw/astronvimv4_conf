@@ -9,7 +9,7 @@ return {
         "lua_ls",
         "pyright",
         "clangd",
-        -- "rust_analyzer",
+        "ruff",
         -- add more arguments for adding more language servers
       },
     },

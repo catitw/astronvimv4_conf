@@ -121,6 +121,11 @@ local lsp = {
   { import = "astrocommunity.lsp.lspsaga-nvim" },
 }
 
+---@type LazySpec[]
+local workflow = {
+  { import = "astrocommunity.workflow.precognition-nvim" },
+}
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -141,4 +146,5 @@ return {
   unpack(recipes),
   unpack(neovim_lua_development),
   unpack(lsp),
+  unpack(workflow),
 }

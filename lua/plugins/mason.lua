@@ -7,9 +7,9 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
-        "pyright",
+        -- "pyright",
         "clangd",
-        "ruff",
+        -- "ruff",
         -- add more arguments for adding more language servers
       },
     },

@@ -137,6 +137,12 @@ local plugin_categories = {
   },
 
   ---@type LazySpec[]
+  utility = {
+    { import = "astrocommunity.utility.noice-nvim" },
+    { import = "astrocommunity.utility.neodim" },
+  },
+
+  ---@type LazySpec[]
   workflow = {
     { import = "astrocommunity.workflow.precognition-nvim" },
   },

@@ -57,18 +57,22 @@ local plugin_categories = {
     { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   },
 
+  ---@type LazySpec[]
   editing_support = {
     { import = "astrocommunity.editing-support.comment-box-nvim" },
     -- a better annotation generator
     { import = "astrocommunity.editing-support.neogen" },
     -- describe the regex under the cursor, toggled with `gR`
     { import = "astrocommunity.editing-support.nvim-regexplainer" },
+    -- `<Leader>u(`: Toggle rainbow delimeters
     { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
     -- provide `:SudaWrite`
     { import = "astrocommunity.editing-support.suda-vim" },
     -- <CR> : incremental selection
     -- <BS> : decremental selection
     { import = "astrocommunity.editing-support.wildfire-nvim" },
+    { import = "astrocommunity.editing-support.nvim-treesitter-context" },
+    { import = "astrocommunity.editing-support.nvim-origami" }, -- fold
   },
 
   ---@type LazySpec[]

@@ -148,7 +148,7 @@ local plugin_categories = {
 
   ---@type LazySpec[]
   workflow = {
-    { import = "astrocommunity.workflow.precognition-nvim" },
+    { import = "astrocommunity.workflow.precognition-nvim", enabled = false },
   },
 }
 

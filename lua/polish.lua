@@ -15,6 +15,15 @@
 --   },
 -- }
 
+vim.filetype.add {
+  -- filename = {
+  --   ["Kbuild.include"] = "make",
+  -- },
+  pattern = {
+    ["Kbuild.*"] = "make",
+  },
+}
+
 vim.opt.shell = "fish"
 
 -- if vim.g.neovide then

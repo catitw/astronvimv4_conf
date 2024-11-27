@@ -106,6 +106,8 @@ local plugin_categories = {
     { import = "astrocommunity.color.twilight-nvim" },
     -- key `<Leader>uT`: toggle transparent
     { import = "astrocommunity.color.transparent-nvim" },
+    -- key `<Leader>uT`: find themes(replace the default)
+    { import = "astrocommunity.color.huez-nvim" },
   },
 
   ---@type LazySpec[]

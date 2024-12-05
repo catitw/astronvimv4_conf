@@ -31,6 +31,10 @@ return {
         -- "lua_ls",
       },
       timeout_ms = 1000, -- default format timeout
+      formatting_options = {
+        insertSpaces = true,
+        trimTrailingWhitespace = true,
+      },
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end

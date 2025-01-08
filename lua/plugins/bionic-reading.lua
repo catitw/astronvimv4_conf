@@ -12,6 +12,7 @@ return {
         ["text"] = "any", -- highlight any node
         ["lua"] = { "comment" },
         ["c"] = { "comment" },
+        ["cpp"] = { "comment" },
         ["rust"] = {
           "comment",
           "block_comment",

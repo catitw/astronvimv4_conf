@@ -60,7 +60,18 @@ local plugin_categories = {
   ---@type LazySpec[]
   editing_support = {
     { import = "astrocommunity.editing-support.comment-box-nvim" },
-    -- a better annotation generator
+    -- adds a 'cut' operation separate from 'delete'
+    { import = "astrocommunity.editing-support.cutlass-nvim" },
+
+    { import = "astrocommunity.editing-support.conform-nvim" },
+
+    -- <C-Down> : Add cursor down
+    -- <C-Up> : Add cursor up
+    -- <C-LeftMouse> : Add cursor with mouse
+    { import = "astrocommunity.editing-support.multiple-cursors-nvim" },
+
+    -- annotation generator
+    -- <Leader>a<CR>: generate annotation
     { import = "astrocommunity.editing-support.neogen" },
     -- describe the regex under the cursor, toggled with `gR`
     { import = "astrocommunity.editing-support.nvim-regexplainer" },

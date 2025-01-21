@@ -55,6 +55,9 @@ local plugin_categories = {
     { import = "astrocommunity.colorscheme.tokyonight-nvim" },
     { import = "astrocommunity.colorscheme.nightfox-nvim" },
     { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+
+    -- download all
+    -- { import = "astrocommunity.colorscheme", lazy = false },
   },
 
   ---@type LazySpec[]
@@ -116,9 +119,9 @@ local plugin_categories = {
     -- key `<Leader>uW`: toggle twilight
     { import = "astrocommunity.color.twilight-nvim" },
     -- key `<Leader>uT`: toggle transparent
-    { import = "astrocommunity.color.transparent-nvim" },
-    -- key `<Leader>uT`: find themes(replace the default)
-    { import = "astrocommunity.color.huez-nvim" },
+    { import = "astrocommunity.color.transparent-nvim", enabled = false },
+    -- key `<Leader>fT`: find themes(replace the default)
+    { import = "astrocommunity.color.huez-nvim", enabled = false },
   },
 
   ---@type LazySpec[]

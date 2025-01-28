@@ -129,6 +129,12 @@ local plugin_categories = {
   motion = {
     -- key `s`: enter flash mode
     { import = "astrocommunity.motion.flash-nvim" },
+
+    -- `<Leader><Leader>a`: Add file
+    -- `<Leader><Leader>e`: Toggle quick menu
+    -- `<C-p>`: Goto previous mark
+    -- `<C-n>`: Goto next mark
+    { import = "astrocommunity.motion.harpoon" },
   },
 
   ---@type LazySpec[]
@@ -154,6 +160,7 @@ local plugin_categories = {
   ---@type LazySpec[]
   neovim_lua_development = {
     { import = "astrocommunity.neovim-lua-development.lazydev-nvim" },
+    { import = "astrocommunity.neovim-lua-development.helpview-nvim" },
   },
 
   ---@type LazySpec[]
@@ -179,6 +186,21 @@ local plugin_categories = {
 
   fuzzy_finder = {
     { import = "astrocommunity.fuzzy-finder.fzf-lua" },
+  },
+
+  git = {
+    -- `<Leader>g|`: Git Graph
+    { import = "astrocommunity.git.gitgraph-nvim" },
+    { import = "astrocommunity.git.diffview-nvim" },
+
+    -- `<Leader>gy`: Git link copy
+    -- `<Leader>gz`: Git link open
+    { import = "astrocommunity.git.gitlinker-nvim" },
+  },
+
+  terminal_integration = {
+    -- Open files and command output from neovim terminals in current neovim instance
+    { import = "astrocommunity.terminal-integration.flatten-nvim" },
   },
 }
 

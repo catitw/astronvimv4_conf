@@ -4,25 +4,51 @@
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
+## ⚡ Requirements
+
+- `Tree-sitter CLI` (Note: This is only necessary if you want to use auto_install feature with Treesitter)
+- `ripgrep` - live grep telescope search (`<Leader>fw`)
+- `lua51` and `luarocks` - see requirements of [luarocks.nvim](https://github.com/vhyrro/luarocks.nvim)
+  > pacman: `sudo pacman -Syu lua51 luarocks`
+
 ## 🛠️ Installation
 
-#### Make a backup of your current nvim and shared folder
+Make a backup of your current nvim and shared folder
 
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+```bash
+# required
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
 ```
 
-#### Clone the repository
+> It is recommended to run `:LazyHealth` after installation.
+> This will load all plugins and check if everything is working correctly.
 
-```shell
+Clone the repository
+
+```bash
 git clone git@github.com:siuolyppah/astronvimv4_conf.git ~/.config/nvim
 ```
 
-#### Start Neovim
+Start Neovim
 
-```shell
+```bash
 nvim
 ```
+
+## 📦 Setup
+
+### Manage plugins
+
+- Run `:Lazy check` (`<Leader>pu`) to check for plugin updates
+- Run `:Lazy update` (`<Leader>pU`) to apply any pending plugin updates
+- Run `:Lazy sync` (`<Leader>pS`) to update and clean plugins
+- Run `:Lazy clean` to remove any disabled or unused plugins
+
+### Update Mason packages and plugins
+
+Run `:AstroUpdate` (`<Leader>pa`) to update both Neovim plugins and Mason packages

@@ -145,6 +145,10 @@ local plugin_categories = {
   ---@type LazySpec[]
   recipes = {
     { import = "astrocommunity.recipes.neovide" },
+
+    -- automatically restore their previous session for a given directory
+    -- when opening Neovim with no arguments
+    { import = "astrocommunity.recipes.auto-session-restore" },
   },
 
   ---@type LazySpec[]
@@ -161,7 +165,10 @@ local plugin_categories = {
 
   ---@type LazySpec[]
   utility = {
+    -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
     { import = "astrocommunity.utility.noice-nvim" },
+
+    -- Neovim plugin for dimming the highlights of unused functions, variables, parameters, and more
     { import = "astrocommunity.utility.neodim" },
   },
 

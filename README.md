@@ -55,7 +55,12 @@ nvim
 
 Run `:AstroUpdate` (`<Leader>pa`) to update both Neovim plugins and Mason packages
 
+### Check AstroNvim version
+
+Run `:AstroVersion` to display the currently installed AstroNvim version
+
 ## Recipes
 
 - [LazyVim News](https://www.lazyvim.org/news)
 - [Astronvim Default Plugins](https://docs.astronvim.com/reference/default_plugins/)
+- [Astronvim CHANGELOG](https://github.com/AstroNvim/AstroNvim/blob/main/CHANGELOG.md)

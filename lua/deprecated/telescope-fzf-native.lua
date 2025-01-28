@@ -1,3 +1,9 @@
+-- why deprecated
+-- we enabled community plugin `fzf-lua`, so just disable `telescope`
+--
+-- note: `LazyVim` replace plugin `telescope-fzf-native.nvim` with plugin `fzf-lua` in version 14.x,
+-- see [LazyVim News](https://www.lazyvim.org/news)
+
 -- see `https://github.com/nvim-telescope/telescope-fzf-native.nvim`
 
 ---@type LazySpec
@@ -12,4 +18,6 @@ return {
       opts = function() require("telescope").load_extension "fzf" end,
     },
   },
+
+  enabled = false,
 }

@@ -10,6 +10,8 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 - `ripgrep` - live grep telescope search (`<Leader>fw`)
 - `lua51` and `luarocks` - see requirements of [luarocks.nvim](https://github.com/vhyrro/luarocks.nvim)
   > pacman: `sudo pacman -Syu lua51 luarocks`
+- `cargo` - required by `blink-cmp`,
+  see [README](https://github.com/AstroNvim/astrocommunity/tree/0e1cf1178a6c0b2bfbc1e5e0d4a3009911b07649/lua/astrocommunity/completion/blink-cmp)
 
 ## 🛠️ Installation
 
@@ -52,3 +54,8 @@ nvim
 ### Update Mason packages and plugins
 
 Run `:AstroUpdate` (`<Leader>pa`) to update both Neovim plugins and Mason packages
+
+## Recipes
+
+- [LazyVim News](https://www.lazyvim.org/news)
+- [Astronvim Default Plugins](https://docs.astronvim.com/reference/default_plugins/)

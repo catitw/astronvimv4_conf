@@ -46,7 +46,8 @@ local plugin_categories = {
 
   ---@type LazySpec[]
   note_taking = {
-    { import = "astrocommunity.note-taking.neorg" },
+    -- `neorg` requires `nvim-cmp`, which disabled by `blink-cmp`
+    { import = "astrocommunity.note-taking.neorg", enabled = false },
   },
 
   ---@type LazySpec[]
@@ -126,11 +127,13 @@ local plugin_categories = {
 
   ---@type LazySpec[]
   motion = {
-    { import = "astrocommunity.motion.flash-nvim", enabled = false },
+    -- key `s`: enter flash mode
+    { import = "astrocommunity.motion.flash-nvim" },
   },
 
   ---@type LazySpec[]
   completion = {
+    { import = "astrocommunity.completion.blink-cmp" },
     { import = "astrocommunity.completion.copilot-lua-cmp", enabled = false },
   },
 
@@ -152,8 +155,8 @@ local plugin_categories = {
   ---@type LazySpec[]
   lsp = {
     { import = "astrocommunity.lsp.actions-preview-nvim" },
+    -- Display LSP inlay hints at the end of the line, rather than within the line.
     { import = "astrocommunity.lsp.nvim-lsp-endhints" },
-    { import = "astrocommunity.lsp.lspsaga-nvim" },
   },
 
   ---@type LazySpec[]
@@ -165,6 +168,10 @@ local plugin_categories = {
   ---@type LazySpec[]
   workflow = {
     { import = "astrocommunity.workflow.precognition-nvim", enabled = false },
+  },
+
+  fuzzy_finder = {
+    { import = "astrocommunity.fuzzy-finder.fzf-lua" },
   },
 }
 
